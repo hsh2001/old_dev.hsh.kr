@@ -1,0 +1,63 @@
+.logo {
+  margin-top: 5rem;
+  padding-bottom: 0;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.first.logo {
+  margin-top: 1rem;
+}
+
+#rc-logo {
+  max-width: 450px;
+  margin: 2rem auto 0 auto;
+}
+
+#aj-go-logo {
+  width: 3rem;
+  margin: auto;
+}
+
+#rc-canvas,
+#omok-canvas {
+  max-width: 450px;
+  margin: auto;
+}
+
+#omok-info {
+  margin: .75rem auto;
+  text-align: center;
+  color: #535353;
+}
+
+#aj-go-bg {
+  position: relative;
+  z-index: 3;
+  min-width: 100vw;
+  min-height: 110vh;
+  background-image: url(../img/ajgo_bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 3rem auto;
+}
+
+#aj-go-container {
+  transition: .75s background;
+  transition-delay: .75s;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0);
+  color: white;
+}
+
+#aj-go-container[animated] {
+  background: rgba(0,0,0,0.7);
+}

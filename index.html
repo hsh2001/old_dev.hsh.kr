@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HSH, Developer.</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/content.css">
+    <link rel="stylesheet" href="assets/css/button.css">
+    <link rel="stylesheet" href="assets/css/main_page.css">
+    <link rel="stylesheet" href="assets/css/skill_list.css">
+    <link rel="stylesheet" href="assets/css/works.css">
+
+    <script src="assets/js/query.js"></script>
+    <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/reverse_change.js"></script>
+
+
+    <script src="assets/js/omok_core/game/core.js"></script>
+    <script src="assets/js/omok_core/game/ban.js"></script>
+    <script src="assets/js/omok_core/game/stone.js"></script>
+    <script src="assets/js/omok_core/game/win.js"></script>
+    <script src="assets/js/omok_core/AI/core.js"></script>
+    <script src="assets/js/omok_core/canvas/board.js"></script>
+    <script src="assets/js/omok_core/canvas/get.js"></script>
+    <script src="assets/js/omok_core/canvas/stone.js"></script>
+    <script src="assets/js/omok_core/object/array.js"></script>
+    <script src="assets/js/omok_core/object/math.js"></script>
+
+    <script src="assets/js/omok.js"></script>
+  </head>
+  <body>
+    <div id=main-page>
+      <div id=main-page-bg>
+        <div id=main-title>
+          <h1>Hwang Seung-hyun</h1>
+          <h2>A Software Developer</h2>
+          <hr>
+        </div>
+      </div>
+    </div>
+
+    <div id=my-skill-page>
+      <section class="container">
+        <p class="sticky title fade-in-on-view">
+          Skills
+        </p>
+        <p class="fade-in-on-view">
+          I'm a Software Developer.
+          I can create anything with many languages.
+        </p>
+        <div id="my-skill-list" class="container">
+          <div class="fade-in-on-view">
+            <div class="html skill-state">
+              <div class="skill-state-bg"></div>
+              <p class="skill-name">HTML</p>
+              <p class="skill-use">2 years.</p>
+            </div>
+            <div class="css skill-state">
+              <div class="skill-state-bg"></div>
+              <p class="skill-name">CSS</p>
+              <p class="skill-use">2 years.</p>
+            </div>
+            <div class="js skill-state">
+              <div class="skill-state-bg"></div>
+              <p class="skill-name">JavaScript</p>
+              <p class="skill-use">2 years.</p>
+            </div>
+            <div class="php skill-state">
+              <div class="skill-state-bg"></div>
+              <p class="skill-name">PHP</p>
+              <p class="skill-use">2 years.</p>
+            </div>
+            <div class="mysql skill-state">
+              <div class="skill-state-bg"></div>
+              <p class="skill-name">MySQL</p>
+              <p class="skill-use">2 years.</p>
+            </div>
+            <div class="c skill-state">
+              <div class="skill-state-bg"></div>
+              <p class="skill-name">C</p>
+              <p class="skill-use">1 years.</p>
+            </div>
+            <div class="perl skill-state">
+              <div class="skill-state-bg"></div>
+              <p class="skill-name">Perl</p>
+              <p class="skill-use">2 month.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <p class="sticky title fade-in-on-view">HTML / CSS / JavaScript</p>
+        <img
+          id=rc-logo
+          class="fade-in-on-view"
+          src="assets/img/rc.png"
+          alt="Reverse-change game logo">
+        <p class="center fade-in-on-view">Simple play board game.</p>
+        <div class="fade-in-on-view">
+          <canvas
+            id="rc-canvas"
+            width="600"
+            height="600"
+          ></canvas>
+          <a
+            href="https://hsh-game.github.io/reverse-change"
+            target="_blank"
+            class="button"
+          >Play</a>
+          <a
+            href="https://github.com/hsh-game/reverse-change"
+            target="_blank"
+            class="button"
+          >Github</a>
+        </div>
+
+        <p id=omok-logo class="logo fade-in-on-view">AI Omok</p>
+        <p class="center fade-in-on-view">
+          Omok with AI.
+        </p>
+        <div class="fade-in-on-view">
+          <canvas
+            id="omok-canvas"
+            width="600"
+            height="600"
+          ></canvas>
+          <p id=omok-info>d</p>
+          <a
+            href="https://hsh-game.github.io/omok"
+            target="_blank"
+            class="button"
+          >Play</a>
+          <a
+            href="https://github.com/hsh-game/omok"
+            target="_blank"
+            class="button"
+          >Github</a>
+        </div>
+
+        <p id=dot-logo class="logo fade-in-on-view">Day of tower</p>
+        <p class="center fade-in-on-view">
+          Collectible card game.
+        </p>
+        <div class="fade-in-on-view">
+          <!-- <img id=dot-cat src="assets/img/a.png"> -->
+          <p class="center">
+            Coming Soon.
+          </p>
+          <a
+            href="https://github.com/hsh-game/dot"
+            target="_blank"
+            class="button"
+          >Github</a>
+        </div>
+      </section>
+
+      <section>
+        <p class="container sticky title fade-in-on-view">PHP / MySQL</p>
+        <div id=aj-go-bg>
+          <div id=aj-go-container class="fade-in-on-view">
+            <div>
+              <p class="first logo">
+                AJ GO!
+              </p>
+              <p class="center">
+                A School community, <br>
+                As Project / Development Manager.
+              </p>
+              <a
+                href="http://hsh.kr"
+                target="_blank"
+                class="white button"
+              >Go to 'AJ GO!'</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section>
+        <p class="container sticky title fade-in-on-view">Perl</p>
+      </section> -->
+    </div>
+
+    <section class="container">
+      <p class="sticky title fade-in-on-view">Contact me.</p>
+      <p class="fade-in-on-view">
+        <a href="mailto:tmdgus0084@naver.com">tmdgus0084@naver.com</a>
+      </p>
+    </section>
+
+    <footer>
+      Copyright (c) 2019 "Seung-hyun Hwang"
+      <br>
+      All Rights Reserved.
+    </footer>
+  </body>
+</html>
