@@ -1,0 +1,16 @@
+.fade-in-on-view {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+.fade-in-on-view[animated] {
+  animation: fadeIn .5s;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(0, 50px);
+  }
+}
