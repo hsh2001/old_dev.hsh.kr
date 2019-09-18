@@ -1,13 +1,29 @@
 .logo {
-  margin-top: 5rem;
+  margin-top: 1rem;
   padding-bottom: 0;
   text-align: center;
   font-size: 2.5rem;
 }
 
-.first.logo {
-  margin-top: 1rem;
+.work {
+  max-width: 850px;
+  padding: 1rem 0;
+  margin: 1rem auto;
 }
+
+/* #work-rc {
+  color: white;
+  background: linear-gradient(#888, #333);
+}
+
+#work-omok {
+  background: linear-gradient(#f0c68f, #f0da8f);
+}
+
+#work-dot {
+  color: white;
+  background: linear-gradient(#eda62c, #ecc315);
+} */
 
 #rc-logo {
   max-width: 450px;
@@ -21,7 +37,9 @@
 
 #rc-canvas,
 #omok-canvas {
-  max-width: 450px;
+  border-radius: 1rem;
+  width: 60%;
+  max-width: 300px;
   margin: auto;
 }
 

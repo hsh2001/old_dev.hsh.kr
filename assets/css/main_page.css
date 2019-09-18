@@ -2,7 +2,6 @@
   background-image: url(../img/first.png);
   background-size: cover;
   background-position: center bottom;
-  background-attachment: fixed;
   width: 100vw;
   height: 100vh;
 }
