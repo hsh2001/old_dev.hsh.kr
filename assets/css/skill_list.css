@@ -1,11 +1,12 @@
 
 #my-skill-page {
   margin: 1rem auto;
-  padding-top: 10vh;
+  padding-top: 20vh;
   word-break: break-all;
 }
 
 #my-skill-list {
+  max-width: 550px;
   margin: 2rem auto;
 }
 
@@ -64,7 +65,6 @@
   background: linear-gradient(90deg, #ff8200, #f75226);
   width: 100%;
 }
-
 
 .css .skill-state-bg {
   transition-delay: .6s;
