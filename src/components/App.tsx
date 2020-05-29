@@ -1,7 +1,12 @@
 import React from 'react';
+import IntroducePage from './IntroducePage';
 
 const App: React.FC = () => {
-  return <>Hello world</>;
+  return (
+    <>
+      <IntroducePage />
+    </>
+  );
 };
 
 export default App;
