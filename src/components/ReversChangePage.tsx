@@ -3,6 +3,8 @@ import style from '../scss/components/ReversChangePage.module.scss';
 import FadeInView from './FadeInView';
 import useScrollSize from '../hooks/uesScrollSize';
 
+new Image().src = '/image/reverse-change-mac-book.png';
+
 const animationWrapperID = 'reverse-change-wrapper';
 const animationSectionID = 'reverse-change-animatin-section';
 const blockSize = 5;

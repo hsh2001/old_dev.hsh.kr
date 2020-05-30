@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import style from '../scss/components/IntroducePage.module.scss';
 
+const profileImage = new Image();
+profileImage.src = '/image/profile-image.jpg';
+export const profileImageLoad: Promise<HTMLImageElement> = new Promise(
+  (resolve) => {
+    profileImage.onload = (): void => {
+      resolve(profileImage);
+    };
+  },
+);
+
 const profileImageCanvasID = 'profile-image-canvas';
 const ProfileImage: React.FC = () => {
   useEffect(() => {
-    const image = new Image();
-    image.src = '/image/profile-image.jpg';
-    image.onload = (): void => {
+    profileImageLoad.then((image) => {
       const canvas = document.getElementById(
         profileImageCanvasID,
       ) as HTMLCanvasElement;
@@ -14,7 +22,7 @@ const ProfileImage: React.FC = () => {
       const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
 
       ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-    };
+    });
   }, []);
 
   return (
@@ -27,7 +35,13 @@ const ProfileImage: React.FC = () => {
   );
 };
 
-const IntroducePage: React.FC = () => {
+interface IntroducePageProps {
+  message: string;
+}
+
+const IntroducePage: React.FC<IntroducePageProps> = ({
+  message = '',
+}: IntroducePageProps) => {
   const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
@@ -42,6 +56,7 @@ const IntroducePage: React.FC = () => {
       <div>
         <ProfileImage />
         <h1>Hwang Seung-hyun</h1>
+        <p>{message}</p>
       </div>
     </div>
   );
