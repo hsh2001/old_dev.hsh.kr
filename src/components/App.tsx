@@ -17,16 +17,14 @@ const App: React.FC = () => {
         import('./ContactPage'),
       ] as const;
 
-      function displayLoadingCount(): void {
-        setMessage(`Loading components... ${loadCount}/${moduleLoads.length}`);
-      }
-
-      displayLoadingCount();
+      setMessage(`Loading components... 0/${moduleLoads.length}`);
 
       moduleLoads.forEach((load) => {
         Promise.all([load]).then(() => {
           loadCount++;
-          displayLoadingCount();
+          setMessage(
+            `Loading components... ${loadCount}/${moduleLoads.length}`,
+          );
         });
       });
 
