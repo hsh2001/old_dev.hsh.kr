@@ -12,7 +12,7 @@ function drawOmokBoard(
   const { width, height } = canvas;
 
   ctx.strokeStyle = '#000';
-  ctx.lineWidth = Math.min(width / 300);
+  ctx.lineWidth = Math.max(7, width / 300);
   ctx.beginPath();
   ctx.moveTo(0, height / 2);
   ctx.lineTo(width * scale, height / 2);
@@ -65,6 +65,7 @@ const AIOmokPage: React.FC = () => {
     eventHandler();
     window.addEventListener('scroll', eventHandler);
     window.addEventListener('resize', eventHandler);
+    setInterval(eventHandler, 30);
   }, []);
 
   useEffect(() => {
@@ -73,13 +74,19 @@ const AIOmokPage: React.FC = () => {
     ) as HTMLCanvasElement;
 
     const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
+    const drawAnimationPoint = 0.5;
 
-    if (scrollSize < 0.3) {
+    if (scrollSize < drawAnimationPoint) {
+      const { width, height } = canvas;
       ctx.fillStyle = '#000';
       ctx.fillRect(0, 0, width, height);
-      ctx.fillStyle = `rgba(240, 198, 143, ${scrollSize / 0.3})`;
+      ctx.fillStyle = `rgba(240, 198, 143, ${scrollSize / drawAnimationPoint})`;
       ctx.fillRect(0, 0, width, height);
-      drawOmokBoard(canvas, ctx, Math.min(1, (scrollSize / 0.3) * 2));
+      drawOmokBoard(
+        canvas,
+        ctx,
+        Math.min(1, (scrollSize / drawAnimationPoint) * 2),
+      );
 
       const { innerWidth, innerHeight } = window;
       if (width !== innerWidth || height !== innerHeight) {
@@ -88,10 +95,15 @@ const AIOmokPage: React.FC = () => {
         setTop('0');
       }
     } else {
+      const { width, height } = canvas;
       ctx.fillStyle = '#f0c68f';
       ctx.fillRect(0, 0, width, height);
       drawOmokBoard(canvas, ctx, 1);
-      ctx.globalAlpha = Math.max(0, scrollSize - 0.5) * 2;
+      console.log({ scrollSize });
+      ctx.globalAlpha =
+        (scrollSize - drawAnimationPoint) / (1 - drawAnimationPoint);
+      console.log(ctx.globalAlpha);
+
       ctx.drawImage(omokImage, 0, 0, width, height);
       ctx.globalAlpha = 1;
 
@@ -109,8 +121,8 @@ const AIOmokPage: React.FC = () => {
       <div className={style.animationWrapper} id={animationWrapperID}>
         <canvas
           id={animationSectionID}
-          width={width}
-          height={height}
+          width={width * 2}
+          height={height * 2}
           style={{
             width: width + 'px',
             height: height + 'px',
