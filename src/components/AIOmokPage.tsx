@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import useScrollSize from '../hooks/uesScrollSize';
 import style from '../scss/components/AIOmokPage.module.scss';
 
 const omokImage = new Image();
@@ -37,36 +38,7 @@ const AIOmokPage: React.FC = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
   const [top, setTop] = useState('0');
-  const [scrollSize, setScrollSize] = useState(0);
-
-  useEffect(() => {
-    function eventHandler(): void {
-      const animationSection = document.getElementById(
-        animationSectionID,
-      ) as HTMLElement;
-
-      const wrapper = document.getElementById(
-        animationWrapperID,
-      ) as HTMLElement;
-
-      const { top } = animationSection.getBoundingClientRect();
-
-      if (Math.abs(top) < 100) {
-        const { height, y } = wrapper.getBoundingClientRect();
-        const { innerHeight } = window;
-        const remainingScrollSize =
-          (height + y - innerHeight) / (innerHeight * 2);
-        const scrollSize = 1 - Math.max(0, Math.min(1, remainingScrollSize));
-
-        setScrollSize(scrollSize);
-      }
-    }
-
-    eventHandler();
-    window.addEventListener('scroll', eventHandler);
-    window.addEventListener('resize', eventHandler);
-    setInterval(eventHandler, 30);
-  }, []);
+  const scrollSize = useScrollSize(animationSectionID, animationWrapperID);
 
   useEffect(() => {
     const canvas = document.getElementById(
@@ -99,11 +71,8 @@ const AIOmokPage: React.FC = () => {
       ctx.fillStyle = '#f0c68f';
       ctx.fillRect(0, 0, width, height);
       drawOmokBoard(canvas, ctx, 1);
-      console.log({ scrollSize });
       ctx.globalAlpha =
         (scrollSize - drawAnimationPoint) / (1 - drawAnimationPoint);
-      console.log(ctx.globalAlpha);
-
       ctx.drawImage(omokImage, 0, 0, width, height);
       ctx.globalAlpha = 1;
 

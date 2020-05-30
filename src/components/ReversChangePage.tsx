@@ -1,12 +1,13 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import style from '../scss/components/ReversChangePage.module.scss';
 import FadeInView from './FadeInView';
+import useScrollSize from '../hooks/uesScrollSize';
 
 const animationWrapperID = 'reverse-change-wrapper';
 const animationSectionID = 'reverse-change-animatin-section';
 const blockSize = 5;
 const ReversChangePage: React.FC = () => {
-  const [scrollSize, setScrollSize] = useState(0);
+  const scrollSize = useScrollSize(animationSectionID, animationWrapperID);
   const blocks = useMemo(() => {
     const blackBlockAmount = blockSize ** 2 * scrollSize;
     return Object.keys(Array(blockSize ** 2).fill(null)).map((index) => {
@@ -23,34 +24,6 @@ const ReversChangePage: React.FC = () => {
       );
     });
   }, [scrollSize]);
-
-  useEffect(() => {
-    function eventHandler(): void {
-      const animationSection = document.getElementById(
-        animationSectionID,
-      ) as HTMLElement;
-
-      const wrapper = document.getElementById(
-        animationWrapperID,
-      ) as HTMLElement;
-
-      const { top } = animationSection.getBoundingClientRect();
-
-      if (Math.abs(top) < 100) {
-        const { height, y } = wrapper.getBoundingClientRect();
-        const { innerHeight } = window;
-        const remainingScrollSize =
-          (height + y - innerHeight) / (innerHeight * 2);
-        const scrollSize = 1 - Math.max(0, Math.min(1, remainingScrollSize));
-
-        setScrollSize(scrollSize);
-      }
-    }
-
-    eventHandler();
-    window.addEventListener('scroll', eventHandler);
-    window.addEventListener('resize', eventHandler);
-  }, []);
 
   return (
     <>
