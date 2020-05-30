@@ -1,0 +1,16 @@
+.animationWrapper {
+  height: 300vh;
+  transition: padding 0.5s;
+
+  canvas {
+    position: sticky;
+    top: 0;
+    transition: width 0.5s, height 0.5s, top 0.5s;
+    margin: auto;
+  }
+}
+
+.mainContentWrapper {
+  height: 50vh;
+  text-align: center;
+}
