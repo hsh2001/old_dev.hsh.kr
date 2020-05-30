@@ -24,7 +24,8 @@
 }
 
 .mainContentWrapper {
-  padding: 25vh 1rem;
+  height: 150vh;
+  padding: 3rem;
   background-color: #000;
   color: #fff;
   text-align: center;
@@ -37,5 +38,11 @@
     width: 80%;
     max-width: 600px;
     margin: 2rem auto;
+  }
+
+  > div {
+    position: sticky;
+    top: 3rem;
+    left: 0;
   }
 }
