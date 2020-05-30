@@ -1,0 +1,23 @@
+.wrapper {
+  height: 300vh;
+
+  > canvas,
+  > div {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  > div {
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(1, 1, 1, 0.8);
+    color: #fff;
+  }
+}
