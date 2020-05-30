@@ -10,10 +10,10 @@ const App: React.FC = () => {
   return (
     <>
       <IntroducePage />
-      <BlinkView title="Game Developer" />
+      <BlinkView title="I am a Game Developer." />
       <ReversChangePage />
       <AIOmokPage />
-      <BlinkView title="Web Developer" />
+      <BlinkView title="I am a Web Developer." />
       <CRIPage />
       <TypoChangePage />
     </>
