@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import './scss/reset.scss';
 import Root from './components/Root';
+import './scss/reset.scss';
+import './scss/buy-me-a-coffee.scss';
 
 ReactDOM.render(<Root />, document.getElementById('root'));
 
