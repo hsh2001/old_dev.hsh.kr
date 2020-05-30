@@ -1,0 +1,44 @@
+.animationWrapper {
+  height: 300vh;
+
+  > div {
+    display: grid;
+    position: sticky;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
+}
+
+.blackBlock {
+  background-color: #000;
+}
+
+.whiteBlock {
+  background-color: #fff;
+}
+
+.mainContentWrapper {
+  height: 150vh;
+  padding: 3rem;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+
+  h2 {
+    font-size: 30px;
+  }
+
+  img {
+    width: 80%;
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+
+  > div {
+    position: sticky;
+    top: 3rem;
+    left: 0;
+  }
+}
