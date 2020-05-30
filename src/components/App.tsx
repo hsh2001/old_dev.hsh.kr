@@ -5,6 +5,7 @@ import ReversChangePage from './ReversChangePage';
 import AIOmokPage from './AIOmokPage';
 import CRIPage from './CRIPage';
 import TypoChangePage from './TypoChangePage';
+import ContactPage from './ContactPage';
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,8 @@ const App: React.FC = () => {
       <BlinkView title="I am a Web Developer." />
       <CRIPage />
       <TypoChangePage />
+      <hr />
+      <ContactPage />
     </>
   );
 };

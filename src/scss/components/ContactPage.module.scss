@@ -1,0 +1,14 @@
+.wrapper {
+  min-height: 20rem;
+
+  h2 {
+    text-align: center;
+  }
+
+  > div {
+    padding: 1rem;
+    padding-bottom: 10rem;
+    max-width: 500px;
+    margin: auto;
+  }
+}
