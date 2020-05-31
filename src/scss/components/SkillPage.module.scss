@@ -1,0 +1,28 @@
+.wrapper {
+  min-height: 50vh;
+  padding: 3rem 1rem;
+
+  h2 {
+    padding: 1rem;
+    text-align: center;
+  }
+  > div {
+    > div {
+      width: 90%;
+      max-width: 500px;
+      margin: auto;
+      @media screen and (min-width: 600px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+}
