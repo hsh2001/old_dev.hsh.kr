@@ -1,0 +1,1 @@
+{"version":3,"sources":["Footer.module.scss"],"names":[],"mappings":"AAAA,sBACE,qBAAsB,CACtB,iBAAkB,CAClB,sBAA4B,CAC5B,UAAW","file":"9.637650f9.chunk.css","sourcesContent":[".footer {\n  background-color: #000;\n  text-align: center;\n  padding: 3rem 1rem 8rem 1rem;\n  color: #fff;\n}\n"]}
