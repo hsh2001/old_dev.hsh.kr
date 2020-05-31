@@ -13,7 +13,7 @@ const App: React.FC = () => {
         import('./ReversChangePage'),
         import('./AIOmokPage'),
         import('./CRIPage'),
-        import('./TypoChangePage'),
+        import('./SkillPage'),
         import('./ContactPage'),
       ] as const;
 
@@ -33,7 +33,7 @@ const App: React.FC = () => {
         { default: ReversChangePage },
         { default: AIOmokPage },
         { default: CRIPage, frames },
-        { default: TypoChangePage },
+        { default: SkillPage },
         { default: ContactPage },
       ] = await Promise.all(moduleLoads);
 
@@ -55,7 +55,7 @@ const App: React.FC = () => {
           <AIOmokPage />
           <BlinkView title="I am a Web Developer." />
           <CRIPage />
-          <TypoChangePage />
+          <SkillPage />
           <hr />
           <ContactPage />
         </>,

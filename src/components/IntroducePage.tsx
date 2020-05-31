@@ -57,6 +57,16 @@ const IntroducePage: React.FC<IntroducePageProps> = ({
         <ProfileImage />
         <h1>Hwang Seung-hyun</h1>
         <p>{message}</p>
+        <br />
+        <div
+          className="fb-like"
+          data-href="http://dev.hsh.kr"
+          data-width=""
+          data-layout="button_count"
+          data-action="like"
+          data-size="large"
+          data-share="false"
+        />
       </div>
     </div>
   );
