@@ -29,7 +29,7 @@ const ContactPage: React.FC = () => {
           </a>
           <br />
           {'e-mail: '}
-          <a href="mailto:tmdgus0084@naver.com">tmdgus0084@naver.com</a>
+          <a href="mailto:dev@hsh.kr">dev@hsh.kr</a>
           <br />
           Disqus:
         </p>
