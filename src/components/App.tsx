@@ -9,6 +9,7 @@ const App: React.FC = () => {
     profileImageLoad.then(async () => {
       let loadCount = 0;
       const moduleLoads = [
+        import('./ArrowDown'),
         import('./BlinkView'),
         import('./ReversChangePage'),
         import('./AIOmokPage'),
@@ -20,15 +21,17 @@ const App: React.FC = () => {
       setMessage(`Loading components... 0/${moduleLoads.length}`);
 
       moduleLoads.forEach((load) => {
-        Promise.all([load]).then(() => {
+        (async (): Promise<void> => {
+          await load;
           loadCount++;
           setMessage(
             `Loading components... ${loadCount}/${moduleLoads.length}`,
           );
-        });
+        })();
       });
 
       const [
+        { default: ArrowDown },
         { default: BlinkView },
         { default: ReversChangePage },
         { default: AIOmokPage },
@@ -50,6 +53,7 @@ const App: React.FC = () => {
 
       setmainContent(
         <>
+          <ArrowDown />
           <BlinkView title="I am a Game Developer." />
           <ReversChangePage />
           <AIOmokPage />
