@@ -3,20 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@agilie/canvas-image-cover-position": "^1.1.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/classnames": "^2.2.10",
+    "@agilie/canvas-image-cover-position": "1.1.1",
+    "@testing-library/jest-dom": "4.2.4",
+    "@testing-library/react": "9.5.0",
+    "@testing-library/user-event": "7.2.1",
+    "@types/classnames": "2.2.10",
     "@types/shortid": "0.0.29",
-    "classnames": "^2.2.6",
-    "disqus-react": "^1.0.8",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3",
-    "shortid": "^2.2.15",
-    "typescript": "^3.9.3"
+    "classnames": "2.2.6",
+    "disqus-react": "1.0.8",
+    "node-sass": "4.14.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-scripts": "3.4.1",
+    "shortid": "2.2.15",
+    "typescript": "3.9.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -47,12 +47,12 @@
     }
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.32.0",
-    "@typescript-eslint/parser": "^2.32.0",
-    "eslint": "^6.6.0",
-    "gh-pages": "^3.0.0",
-    "husky": "^4.2.5",
-    "prettier": "^2.0.5",
-    "pretty-quick": "^2.0.1"
+    "@typescript-eslint/eslint-plugin": "2.34.0",
+    "@typescript-eslint/parser": "2.34.0",
+    "eslint": "6.8.0",
+    "gh-pages": "3.0.0",
+    "husky": "4.2.5",
+    "prettier": "2.0.5",
+    "pretty-quick": "2.0.1"
   }
 }
