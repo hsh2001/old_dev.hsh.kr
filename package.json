@@ -12,7 +12,7 @@
     "@types/react-dom": "^16.9.8",
     "@types/shortid": "0.0.29",
     "classnames": "2.2.6",
-    "disqus-react": "1.0.9",
+    "disqus-react": "1.0.10",
     "node-sass": "4.14.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
