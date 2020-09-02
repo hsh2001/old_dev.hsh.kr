@@ -109,6 +109,8 @@ const SkillPage: React.FC = () => {
           </h3>
           <p>NodeJS</p>
           <p>PHP</p>
+          <p>NextJS</p>
+          <p>NextJS with TypeScript</p>
         </div>
         <div>
           <h3>

@@ -76,7 +76,11 @@ const CRIPage: React.FC = () => {
       <div className={style.wrapper} id={animationWrapperID}>
         <canvas id={animationSectionID} width={width} height={height} />
         <div style={{ opacity }}>
-          <h1>Cultural Resources</h1>
+          <div>
+            <h1>Worked for Cultural Resources</h1>
+            <p>2019.07 ~</p>
+            <p>with NodeJS, NextJS, Perl, React, TypeScript</p>
+          </div>
         </div>
       </div>
     </>
