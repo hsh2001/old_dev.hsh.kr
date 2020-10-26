@@ -55,6 +55,6 @@
     "gh-pages": "3.1.0",
     "husky": "4.3.0",
     "prettier": "2.0.5",
-    "pretty-quick": "2.0.1"
+    "pretty-quick": "3.1.0"
   }
 }
