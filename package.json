@@ -5,7 +5,7 @@
   "dependencies": {
     "@agilie/canvas-image-cover-position": "1.1.1",
     "@testing-library/jest-dom": "5.11.3",
-    "@testing-library/react": "10.4.8",
+    "@testing-library/react": "11.2.5",
     "@testing-library/user-event": "12.1.1",
     "@types/classnames": "2.2.10",
     "@types/react": "16.9.49",
