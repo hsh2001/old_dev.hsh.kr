@@ -43,11 +43,10 @@ const App: React.FC = () => {
       loadCount = 0;
       setMessage(`Loading images... ${loadCount}/${frames.length}`);
       await Promise.all(
-        frames.map((frame) => {
-          return frame.promise.then(() => {
-            loadCount++;
-            setMessage(`Loading images... ${loadCount}/${frames.length}`);
-          });
+        frames.map(async (frame) => {
+          await frame.promise;
+          loadCount++;
+          setMessage(`Loading images... ${loadCount}/${frames.length}`);
         }),
       );
 
