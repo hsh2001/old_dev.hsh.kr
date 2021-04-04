@@ -3,6 +3,7 @@ import IntroducePage, { profileImageLoad } from './IntroducePage';
 
 const App: React.FC = () => {
   const [message, setMessage] = useState('Loading... Please wait.');
+  const [loadingSize, setLoadingSize] = useState(0);
   const [mainContent, setmainContent] = useState(<></>);
 
   useEffect(() => {
@@ -46,6 +47,7 @@ const App: React.FC = () => {
         frames.map(async (frame) => {
           await frame.promise;
           loadCount++;
+          setLoadingSize(loadCount / frames.length);
           setMessage(`Loading images... ${loadCount}/${frames.length}`);
         }),
       );
@@ -70,7 +72,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <IntroducePage message={message} />
+      <IntroducePage message={message} loadingSize={loadingSize} />
       {mainContent}
     </>
   );

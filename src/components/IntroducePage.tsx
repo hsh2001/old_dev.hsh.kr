@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import style from '../scss/components/IntroducePage.module.scss';
+import styled from 'styled-components';
 
 const profileImage = new Image();
 profileImage.src = '/image/profile-image.jpg';
@@ -37,10 +38,39 @@ const ProfileImage: React.FC = () => {
 
 interface IntroducePageProps {
   message: string;
+  loadingSize: number;
 }
+
+interface LoadingBarProps {
+  size: number;
+}
+
+const LoadingBarAnimation = styled.div<LoadingBarProps>`
+  width: ${(props) => props.size * 100}%;
+  height: 100%;
+  transition: width 0.3s;
+  background-color: #abf200;
+  border-radius: 1rem;
+`;
+
+const LoadingBarContainer = styled.div`
+  width: 90vw;
+  height: 1rem;
+  max-width: 450px;
+  margin: 1rem auto;
+`;
+
+const LoadingBar: React.FC<LoadingBarProps> = ({ size }: LoadingBarProps) => {
+  return (
+    <LoadingBarContainer>
+      <LoadingBarAnimation size={size} />
+    </LoadingBarContainer>
+  );
+};
 
 const IntroducePage: React.FC<IntroducePageProps> = ({
   message = '',
+  loadingSize,
 }: IntroducePageProps) => {
   const [opacity, setOpacity] = useState(1);
 
@@ -57,7 +87,7 @@ const IntroducePage: React.FC<IntroducePageProps> = ({
         <ProfileImage />
         <h1>Hwang Seung-hyun</h1>
         <p>{message}</p>
-        <br />
+        <LoadingBar size={loadingSize} />
         <div
           className="fb-like"
           data-href="http://dev.hsh.kr"
