@@ -19,7 +19,7 @@
     "react-scripts": "3.4.1",
     "shortid": "2.2.15",
     "styled-components": "5.2.3",
-    "typescript": "3.9.7"
+    "typescript": "3.9.9"
   },
   "scripts": {
     "start": "react-scripts start",
