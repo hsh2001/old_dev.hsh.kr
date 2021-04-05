@@ -16,7 +16,7 @@
     "node-sass": "4.14.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "4.0.3",
     "shortid": "2.2.15",
     "styled-components": "5.2.3",
     "typescript": "3.9.7"
