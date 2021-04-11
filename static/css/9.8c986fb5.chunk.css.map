@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/scss/components/ArrowDown.module.scss"],"names":[],"mappings":"AAAA,wBACE,cAAe","file":"9.8c986fb5.chunk.css","sourcesContent":[".arrow {\n  position: fixed;\n}\n"]}
