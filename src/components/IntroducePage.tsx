@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import style from '../scss/components/IntroducePage.module.scss';
 import styled from 'styled-components';
 
 const profileImage = new Image();
@@ -11,6 +10,12 @@ export const profileImageLoad: Promise<HTMLImageElement> = new Promise(
     };
   },
 );
+
+const StyledProfileImage = styled.canvas`
+  width: 45vw;
+  max-width: 150px;
+  margin: auto;
+`;
 
 const profileImageCanvasID = 'profile-image-canvas';
 const ProfileImage: React.FC = () => {
@@ -27,12 +32,7 @@ const ProfileImage: React.FC = () => {
   }, []);
 
   return (
-    <canvas
-      width={500}
-      height={500}
-      id={profileImageCanvasID}
-      className={style.profileImage}
-    />
+    <StyledProfileImage width={500} height={500} id={profileImageCanvasID} />
   );
 };
 
@@ -68,6 +68,14 @@ const LoadingBar: React.FC<LoadingBarProps> = ({ size }: LoadingBarProps) => {
   );
 };
 
+const StyledIntroducePage = styled.div`
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`;
+
 const IntroducePage: React.FC<IntroducePageProps> = ({
   message = '',
   loadingSize,
@@ -82,7 +90,7 @@ const IntroducePage: React.FC<IntroducePageProps> = ({
   }, []);
 
   return (
-    <div className={style.introducePage} style={{ opacity }}>
+    <StyledIntroducePage style={{ opacity }}>
       <div>
         <ProfileImage />
         <h1>Hwang Seung-hyun</h1>
@@ -98,7 +106,7 @@ const IntroducePage: React.FC<IntroducePageProps> = ({
           data-share="false"
         />
       </div>
-    </div>
+    </StyledIntroducePage>
   );
 };
 
